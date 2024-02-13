@@ -1,8 +1,11 @@
 import './styles/style.css'
 
-fetch('/.netlify/functions/weather?city=London')
+const netlifyFunctionUrl =
+  'https://prismatic-kangaroo-1a0ac9.netlify.app/.netlify/functions/weather?city=London'
+
+fetch(netlifyFunctionUrl)
   .then((response) => response.json())
   .then((data) => console.log(data))
   .catch((error) => console.error('Error:', error))
 
-console.log('This is the newest test and I need to go to bed cos im tired as.')
+console.log('One last change please.')
