@@ -1,0 +1,4 @@
+[dev]
+  port = 8888 # The port your local server runs on
+  targetPort = 3000 # The port your framework's development server runs on
+  autoLaunch = false # Automatically opens your browser to the local server URL

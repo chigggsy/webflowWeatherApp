@@ -1,17 +1,8 @@
 import './styles/style.css'
-import axios from 'axios'
 
-const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY
-const city = 'Manchester'
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+fetch('/.netlify/functions/weather?city=London')
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error('Error:', error))
 
-const fetchWeather = async () => {
-  try {
-    const response = await axios.get(url)
-    console.log(response.data)
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-fetchWeather()
+console.log('This is the newest test and I need to go to bed cos im tired as.')
